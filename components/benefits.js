@@ -15,15 +15,12 @@ const Benefits = (props) => {
             <Image
               src={data.image}
               width="521"
-              height="auto"
+              height="400"
               alt="Benefits"
               className={"object-cover"}
-              placeholder="blur"
-              blurDataURL={data.image.src}
             />
           </div>
         </div>
-
         <div
           className={`flex flex-wrap items-center w-full lg:w-1/2 ${
             data.imgPos === "right" ? "lg:justify-end" : ""
@@ -33,12 +30,7 @@ const Benefits = (props) => {
               <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
                 {data.title}
               </h3>
-
-              <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
-                {data.desc}
-              </p>
             </div>
-
             <div className="w-full mt-5">
               {data.bullets.map((item, index) => (
                 <Benefit key={index} title={item.title} icon={item.icon}>
