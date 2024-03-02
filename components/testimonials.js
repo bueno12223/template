@@ -6,56 +6,68 @@ import userOneImg from "../public/img/user1.jpg";
 import userTwoImg from "../public/img/user2.jpg";
 import userThreeImg from "../public/img/user3.jpg";
 
-const Testimonials  = () => {
+const Testimonials = () => {
   return (
     <Container>
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
         <div className="lg:col-span-2 xl:col-auto">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              Share a real <Mark>testimonial</Mark>
-              that hits some of your benefits from one of your popular customer.
+              Antes de implementar el{" "}
+              <Mark> Sistema de Etiquetas a Medida</Mark>, pasábamos horas cada
+              semana lidiando con el software genérico que nunca parecía
+              ajustarse del todo a nuestras necesidades. Ahora, con una solución
+              diseñada específicamente para nosotros, hemos reducido el tiempo
+              de impresión de etiquetas en un 70%. La eficiencia y la precisión
+              que hemos ganado han transformado nuestra operación logística,
+              permitiéndonos enfocarnos en escalar nuestro negocio en lugar de
+              pelearnos con la tecnología.
             </p>
 
             <Avatar
               image={userOneImg}
-              name="Sarah Steiner"
-              title="VP Sales at Google"
+              name="Alexa R."
+              title="Gerente de
+              Operaciones, Distribuidora Soluciones Integrales"
             />
           </div>
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              Make sure you only pick the <Mark>right sentence</Mark>
-              to keep it short and simple.
+              Lanzar nuestra plataforma de e-commerce fue un desafío,
+              especialmente en un mercado tan competitivo. Sin embargo, el
+              desarrollo de un <Mark>sistema a medida</Mark> que integró pasarelas de pago
+              seguras, servicios de entrega a domicilio y seguimiento de envíos
+              en tiempo real, nos puso varios pasos adelante de la competencia.
+              Nuestros clientes aman la transparencia y la facilidad de uso.
+              Nuestras ventas han aumentado un 40% desde el lanzamiento, y la
+              fidelidad del cliente nunca ha sido tan alta
             </p>
 
             <Avatar
               image={userTwoImg}
-              name="Dylan Ambrose"
-              title="Lead marketer at Netflix"
+              name="Marco T., Fundador"
+              title="Tienda Online EcoModa"
             />
           </div>
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              This is an <Mark>awesome</Mark> landing page template I&apos;ve seen. I
-              would use this for anything.
+              La implementación de un <Mark>Sistema de Bodega Integrado con Inteligencia Artificial</Mark> ha revolucionado la forma en que gestionamos nuestro inventario. Antes, las discrepancias de stock y los errores de pedido eran un problema constante. Ahora, la IA nos ayuda a predecir con precisión las necesidades de reabastecimiento, optimiza la disposición de la bodega y mejora la precisión del picking en un 95%. Esto no solo ha mejorado nuestra eficiencia operativa, sino que también ha elevado la satisfacción del cliente al garantizar entregas rápidas y precisas.
             </p>
-
             <Avatar
               image={userThreeImg}
-              name="Gabrielle Winn"
-              title="Co-founder of Acme Inc"
+              name="Tomas C., Director de Logística"
+              title="Electrónicos Innovadores SA"
             />
           </div>
         </div>
       </div>
     </Container>
   );
-}
+};
 
 function Avatar(props) {
   return (
