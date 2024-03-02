@@ -12,9 +12,8 @@ const Hero = () => {
               Optimiza tus procesos de negocio con <span className="text-customYellow">software</span>
             </h1>
             <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
-            Creamos software a la medida para tu empresa, con tecnologías de vanguardia y las mejores prácticas de desarrollo.
+            Eficiencia y rentabilidad para tu empresa. Desarrollamos soluciones a la medida de tus necesidades con tecnología de punta.
             </p>
-
             <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
               <a
                 href="https://web3templates.com/templates/nextly-landing-page-template-for-startups"
