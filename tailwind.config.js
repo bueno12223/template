@@ -15,6 +15,7 @@ module.exports = {
     fontFamily: {
       sans: ["Inter", ...defaultTheme.fontFamily.sans],
       stock: [defaultTheme.fontFamily.sans],
+      dmSans: ["DmSans", "sans-serif"]
     },
   },
   variants: {
