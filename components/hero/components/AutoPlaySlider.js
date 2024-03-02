@@ -55,6 +55,15 @@ const AutoPlaySlider = () => {
             />
           </div>
         </div>
+        <div className="px-2">
+          <div className="text-gray-400 dark:text-gray-400">
+          <Image
+              width={size}
+              height={size}
+              src={'/img/brands/foody.png'}
+            />
+          </div>
+        </div>
     </div>
   );
 };
