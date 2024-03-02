@@ -1,6 +1,6 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
-
+her
 module.exports = {
   mode: "jit",
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         trueGray: colors.neutral,
-        customYellow: '#F8C233ff', 
+        customYellow: '#F97713', 
       },
     },
     fontFamily: {

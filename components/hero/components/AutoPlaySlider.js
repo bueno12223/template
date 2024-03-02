@@ -1,6 +1,4 @@
 import React from 'react';
-import Slider from 'react-slick';
-import { RiOpenaiFill } from "react-icons/ri";
 import Image from 'next/image';
 
 
@@ -20,8 +18,7 @@ const AutoPlaySlider = () => {
   const size = 120;
 
   return (
-    <div className="mt-10">
-      <Slider {...settings}>
+    <div className="mt-10 flex items-center justify-between w-100 px-26">
         <div className="px-2">
           <div className="pt-2 text-gray-400 dark:text-gray-400">
             <Image
@@ -58,7 +55,6 @@ const AutoPlaySlider = () => {
             />
           </div>
         </div>
-      </Slider>
     </div>
   );
 };
