@@ -12,10 +12,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
             rel="stylesheet"
           />
-          <Link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap"
-            rel="stylesheet"
-          />
         </Head>
         <body>
           <Main />
