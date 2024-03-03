@@ -12,16 +12,13 @@ const Testimonials = () => {
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
         <div className="lg:col-span-2 xl:col-auto">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-              Antes de implementar el{" "}
-              <Mark> Sistema de Etiquetas a Medida</Mark>, pasábamos horas cada
-              semana lidiando con el software genérico que nunca parecía
-              ajustarse del todo a nuestras necesidades. Ahora, con una solución
-              diseñada específicamente para nosotros, hemos reducido el tiempo
-              de impresión de etiquetas en un 70%. La eficiencia y la precisión
-              que hemos ganado han transformado nuestra operación logística,
-              permitiéndonos enfocarnos en escalar nuestro negocio en lugar de
-              pelearnos con la tecnología.
+            <p className="text-base   leading-normal ">
+              Antes, lidiábamos con un software genérico que no se adaptaba a
+              nuestras necesidades. Ahora, con el
+              <Mark>Sistema de Etiquetas a Medida</Mark> , redujimos el tiempo
+              de impresión en un 70%. Esta solución personalizada transformó
+              nuestra operación logística, permitiéndonos enfocarnos en hacer
+              crecer nuestro negocio en lugar de luchar con la tecnología.
             </p>
 
             <Avatar
@@ -34,17 +31,15 @@ const Testimonials = () => {
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-              Lanzar nuestra plataforma de e-commerce fue un desafío,
-              especialmente en un mercado tan competitivo. Sin embargo, el
-              desarrollo de un <Mark>sistema a medida</Mark> que integró pasarelas de pago
-              seguras, servicios de entrega a domicilio y seguimiento de envíos
-              en tiempo real, nos puso varios pasos adelante de la competencia.
-              Nuestros clientes aman la transparencia y la facilidad de uso.
-              Nuestras ventas han aumentado un 40% desde el lanzamiento, y la
-              fidelidad del cliente nunca ha sido tan alta
+            <p className="text-base leading-normal ">
+              Lanzar nuestra plataforma de e-commerce fue un desafío, pero el
+              <Mark>desarrollo de un sistema a medida</Mark> que integra
+              pasarelas de pago seguras, servicios de entrega y seguimiento en
+              tiempo real nos colocó por delante de la competencia. Nuestros
+              clientes adoran la transparencia y la facilidad de uso. Desde su
+              lanzamiento, nuestras ventas han aumentado un 40% y la fidelidad
+              del cliente nunca ha sido tan alta.
             </p>
-
             <Avatar
               image={userTwoImg}
               name="Marco T., Fundador"
@@ -54,8 +49,14 @@ const Testimonials = () => {
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-              La implementación de un <Mark>Sistema de Bodega Integrado con Inteligencia Artificial</Mark> ha revolucionado la forma en que gestionamos nuestro inventario. Antes, las discrepancias de stock y los errores de pedido eran un problema constante. Ahora, la IA nos ayuda a predecir con precisión las necesidades de reabastecimiento, optimiza la disposición de la bodega y mejora la precisión del picking en un 95%. Esto no solo ha mejorado nuestra eficiencia operativa, sino que también ha elevado la satisfacción del cliente al garantizar entregas rápidas y precisas.
+            <p className="text-base leading-normal">
+              La implementación del <Mark>Sistema de Bodega con Inteligencia
+              Artificial</Mark> ha revolucionado nuestra gestión de inventario. Antes,
+              las discrepancias y errores eran constantes, pero ahora la IA nos
+              ayuda a prever necesidades, optimizar el espacio y mejorar la
+              precisión en un 95% en el picking. Esto ha mejorado nuestra
+              eficiencia operativa y la satisfacción del cliente con entregas
+              más rápidas y precisas.
             </p>
             <Avatar
               image={userThreeImg}
