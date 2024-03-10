@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import Link from "next/link";
+import Script from "next/script";
 import { GoogleAdSense } from "nextjs-google-adsense";
 
 class MyDocument extends Document {
@@ -13,7 +14,8 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
             rel="stylesheet"
           />
-                 <GoogleAdSense publisherId="ca-pub-4439391006607431" />
+                 <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4439391006607431"
+     crossorigin="anonymous"></Script>
         </Head>
         <body>
           <Main />
