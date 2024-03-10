@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class">
-       <GoogleAdSense publisherId="pub-4439391006607431" />
+       <GoogleAdSense publisherId="ca-pub-4439391006607431" />
       <Component {...pageProps} />
     </ThemeProvider>
   );
