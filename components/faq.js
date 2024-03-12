@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import Container from "./container";
 import SectionTitle from "./sectionTitle";
+import useToast from "../hooks/useToast";
 
 const ContactForm = () => {
+  const [toastSuccess, toastError, toastWarning] = useToast();
+  const [loading, setLoading] = useState(false);
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -16,9 +19,29 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async(event) => {
+    setLoading(true);
     event.preventDefault();
-    console.log(formState);
+
+    if (!formState.name || !formState.email || !formState.message) {
+      toastError("Por favor, rellena todos los campos");
+    }
+
+    const response = await fetch("/api/message", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ message: formState }),
+    });
+
+    if (!response.ok) {
+      const errorMessage = await response.json();
+      toastError(errorMessage?.error?? "Hubo un error al enviar el mensaje");
+    }
+
+    setLoading(false);
+    toastSuccess("Mensaje enviado correctamente");
   };
 
   return (
@@ -64,13 +87,13 @@ const ContactForm = () => {
             <textarea
               id="message"
               name="message"
-              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32" // Aquí se ha añadido la clase h-32 para hacer el textarea más alto
+              className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 dark:text-gray-300 leading-tight focus:outline-none focus:shadow-outline h-32" // Aquí se ha añadido la clase h-32 para hacer el textarea más alto
               value={formState.message}
               onChange={handleInputChange}
               placeholder="Escribe tu mensaje aquí"
             />
           </div>
-          <button type="submit" className="px-8 py-3 text-2xl text-white bg-customYellow rounded-md w-full">
+          <button disabled={loading} type="submit" className={`px-8 py-3 text-2xl text-white rounded-md w-full ${loading ? 'bg-gray-400' : 'bg-customYellow'}`}>
             Enviar
           </button>
         </form>
