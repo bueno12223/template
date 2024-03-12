@@ -22,13 +22,13 @@ const ContactForm = () => {
   };
 
   return (
-    <Container className="!p-0">
+    <Container id='contacto' className="!p-0">
             <SectionTitle
         pretitle="Contáctanos"
         title="Envíanos un mensaje"
       ></SectionTitle>
       <div className="w-full max-w-2xl p-2 mx-auto rounded-2xl">
-        <form onSubmit={handleSubmit}>
+        <form id='contacto' onSubmit={handleSubmit}>
           <div className="mb-5">
             <label htmlFor="name" className="block text-gray-700 text-lg font-bold mb-2 dark:text-gray-300">
               Nombre:
@@ -40,7 +40,7 @@ const ContactForm = () => {
               className="shadow text-lg appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline dark:text-gray-300"
               value={formState.name}
               onChange={handleInputChange}
-              placeholder="Bruce Wayne"
+              placeholder="Jhon Doe"
             />
           </div>
           <div className="mb-5">
@@ -71,7 +71,7 @@ const ContactForm = () => {
             />
           </div>
           <button type="submit" className="px-8 py-3 text-2xl text-white bg-customYellow rounded-md w-full">
-            Enviarsa
+            Enviar
           </button>
         </form>
       </div>

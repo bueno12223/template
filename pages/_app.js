@@ -1,6 +1,6 @@
 import { ThemeProvider } from "next-themes";
-import { GoogleAdSense } from "nextjs-google-adsense";
 import "../css/tailwind.css";
+import Script from "next/script";
 
 
 import "slick-carousel/slick/slick.css"; 

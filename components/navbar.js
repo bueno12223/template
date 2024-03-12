@@ -7,8 +7,17 @@ const Navbar = () => {
   const navigation = [
     "Servicios",
     "Nosotros",
-    "Proyectos",
+    "Testimonios",
   ];
+
+  const handleClick = (event) => {
+    event.preventDefault();
+
+    const { value } = event.target;
+    const element = document.getElementById(value);
+    if(!element) return;
+    element.scrollIntoView({ behavior: "smooth", block: 'center' });
+  }
 
   return (
     <div className="w-full">
@@ -58,10 +67,10 @@ const Navbar = () => {
 
                 <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
                   <>
-                    {navigation.map((item, index) => (
-                      <Link key={index} href="/" className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-customYellow focus:text-customYellow focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none">
+                    {navigation.map((item) => (
+                      <button onClick={handleClick} value={item} key={item} className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-customYellow focus:text-customYellow focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none">
                           {item}
-                      </Link>
+                      </button>
                     ))}
                     <Link href="/" className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5">         
                         Contactar
@@ -76,11 +85,11 @@ const Navbar = () => {
         {/* menu  */}
         <div className="hidden text-center lg:flex lg:items-center">
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
-            {navigation.map((menu, index) => (
+            {navigation.map((item, index) => (
               <li className="mr-3 nav__item" key={index}>
-                <Link href="/" className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-customYellow focus:text-customYellow focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
-                    {menu}
-                </Link>
+                   <button onClick={handleClick} value={item} key={item} className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-customYellow focus:text-customYellow focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none">
+                          {item}
+                      </button>
               </li>
             ))}
           </ul>
