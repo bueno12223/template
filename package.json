@@ -1,23 +1,13 @@
 {
-  "name": "nextly-template",
+  "name": "citrusoft-template",
   "version": "0.1.0",
-  "description": "Nextly Landing Page Template",
+  "description": "CitruSoft Next.js Template",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://gituhb.com/web3templates/nextly-template"
-  },
-  "keywords": [
-    "nextjs",
-    "tailwindcss",
-    "free"
-  ],
-  "author": "Surjith S M",
   "license": "ISC",
   "dependencies": {
     "@emotion/css": "^11.10.6",
@@ -30,11 +20,9 @@
     "i18next": "^23.10.0",
     "next": "^13.3.1",
     "next-themes": "^0.2.1",
-    "nextjs-google-adsense": "^1.0.0",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.43.9",
-    "react-icons": "^5.0.1",
     "react-slick": "^0.30.2",
     "react-toastify": "^10.0.4",
     "slick-carousel": "^1.8.1",
