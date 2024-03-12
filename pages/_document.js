@@ -13,12 +13,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
             rel="stylesheet"
           />
-      <script
-      id="adsbygoogle-init"
-      strategy="afterInteractive"
-      crossOrigin="anonymous"
-      src= "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4439391006607431"
-      />
+          <meta name="google-adsense-account" content="ca-pub-4439391006607431" />
         </Head>
         <body>
           <Main />
