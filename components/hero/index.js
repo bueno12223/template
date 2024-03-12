@@ -48,6 +48,7 @@ const Hero = () => {
               alt="Hero Illustration"
               loading="eager"
               width={500}
+              priority
               height={500}
             />
           </div>

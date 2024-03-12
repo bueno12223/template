@@ -1,6 +1,8 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import Link from "next/link";
-import Script from "next/script";
+import { GoogleAnalytics } from '@next/third-parties/google'
+import Script from 'next/script'
+
 
 class MyDocument extends Document {
   render() {
@@ -18,6 +20,19 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-E7NY2W59JZ"
+        />
+
+        <Script id="google-analytics">
+          {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', ${'${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}'});
+          `}
+        </Script>
         </body>
       </Html>
     );
