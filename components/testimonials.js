@@ -21,7 +21,7 @@ const Testimonials = () => {
     <div className="">
       <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
         <p className="text-base leading-normal">
-          El Stereo Picnic ha sido revolucionado con nuestra aplicación personalizada. Desde la optimización de la gestión de entradas hasta la mejora en la comunicación con los asistentes, hemos logrado una significativa mejora en la logística del evento. <Mark>Se ha reducido el tiempo de espera en un 70%</Mark>, brindando una experiencia más satisfactoria.
+          El Stereo Picnic ha sido revolucionado con nuestra aplicación personalizada. Desde la optimización de la gestión de entradas hasta la mejora en la comunicación con los asistentes, hemos logrado una significativa mejora en la logística del evento. <Mark>Se ha reducido el tiempo de espera en un 70%</Mark> a comparación de otros años, brindando una experiencia más satisfactoria.
         </p>
         <Avatar
           name="Alejandro G., Director de Tecnología"

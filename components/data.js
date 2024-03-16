@@ -24,7 +24,7 @@ const benefitOne = {
       icon: <CursorArrowRaysIcon />,
     },
     {
-      title: "Aumente sus ingresos y reduzca costos",
+      title: "Aumente sus ingresos y reducimos costos",
       desc: "Te apoyaremos en la implementación de la solución, te capacitaremos y te acompañaremos en el proceso de adopción.",
       icon: <FaceSmileIcon />,
 

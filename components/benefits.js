@@ -14,9 +14,9 @@ const Benefits = (props) => {
           }`}>
           <div>
             <Image
-              src={data.image}
-              width="521"
+              src='/samples/TC-admin.webp'
               height="400"
+              width={"600"}
               alt="Benefits"
               className={"object-cover"}
             />

@@ -25,15 +25,18 @@ const Home = () => {
 
       <Navbar />
       <Hero />
+      <SectionTitle
+        pretitle="Servicios"
+        title="Lo que hacemos"
+      />
       <Benefits data={benefitOne} />
       <SectionTitle
-        pretitle="Mira un video"
+        pretitle="Nosotros"
         title="Mira cómo funciona" />
       <Video />
       <SectionTitle
-        pretitle="Testimonials"
-        title="
-        Lo que dicen nuestros clientes"
+        pretitle="Testimonios"
+        title="Lo que dicen nuestros clientes"
       >
 
       </SectionTitle>

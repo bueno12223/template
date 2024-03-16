@@ -17,10 +17,10 @@ const Hero = () => {
         <div className="flex items-center w-full lg:w-1/2">
           <div className="max-w-2xl mb-8">
             <h1 className="text-4xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
-              Optimiza tus procesos de negocio con <span className="text-customYellow">software</span>
+              Eficiencia y rentabilidad para tu empresa con <span className="text-customYellow">software</span>
             </h1>
             <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
-            Eficiencia y rentabilidad para tu empresa. Desarrollamos soluciones a la medida de tus necesidades con tecnología de punta
+            Desarrollamos soluciones de software a la medida, entendemos mejoramos y automatizamos tus procesos operativos.
             </p>
             <div className="flex gap-2 items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
               <button

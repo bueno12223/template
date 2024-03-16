@@ -19,6 +19,14 @@ const Navbar = () => {
     element.scrollIntoView({ behavior: "smooth", block: 'center' });
   }
 
+  const handleClickContact = (event) => {
+    event.preventDefault();
+
+    const element = document.getElementById('contacto');
+    if(!element) return;
+    element.scrollIntoView({ behavior: "smooth", block: 'center' });
+  }
+
   return (
     <div className="w-full">
       <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
@@ -72,9 +80,9 @@ const Navbar = () => {
                           {item}
                       </button>
                     ))}
-                    <Link href="/" className="w-full px-6 py-2 mt-3 text-center text-white bg-customYellow rounded-md lg:ml-5">         
+                    <button onClick={handleClick} className="w-full px-6 py-2 mt-3 text-center text-white bg-customYellow rounded-md lg:ml-5">         
                         Contactar
-                    </Link>
+                    </button>
                   </>
                 </Disclosure.Panel>
               </div>
@@ -89,16 +97,16 @@ const Navbar = () => {
               <li className="mr-3 nav__item" key={index}>
                    <button onClick={handleClick} value={item} key={item} className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-customYellow focus:text-customYellow focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none">
                           {item}
-                      </button>
+                    </button>
               </li>
             ))}
           </ul>
         </div>
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-          <Link href="/" className="px-6 py-2 text-white bg-customYellow rounded-md md:ml-5">
+          <button onClick={handleClickContact} className="px-6 py-2 text-white bg-customYellow rounded-md md:ml-5">
           Contactar
-          </Link>
+          </button>
 
           <ThemeChanger />
         </div>
