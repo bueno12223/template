@@ -12,10 +12,6 @@ module.exports = {
         customYellow: '#F97713', 
       },
     },
-    fontFamily: {
-      sans: ["DmSans", ...defaultTheme.fontFamily.sans],
-      stock: [defaultTheme.fontFamily.sans],
-    },
   },
   variants: {
     extend: {},

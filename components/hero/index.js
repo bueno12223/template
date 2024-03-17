@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Container from "../container";
 import AutoPlaySlider from "./components/AutoPlaySlider";
+import Navbar from "../navbar";
+import VideoBackground from "./components/VideoBackground";
 
 const Hero = () => {
   const handleClick = (event) => {
@@ -12,11 +14,12 @@ const Hero = () => {
   }
 
   return (
-    <>
+    <VideoBackground src={['/video/bg-hero.webm', '/video/bg-hero.mp4']}>
+      <Navbar />
       <Container className="flex flex-wrap ">
         <div className="flex items-center w-full lg:w-1/2">
           <div className="max-w-2xl mb-8">
-            <h1 className="text-4xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
+            <h1 className="text-4xl uppercase font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
               Eficiencia y rentabilidad para tu empresa con <span className="text-customYellow">software</span>
             </h1>
             <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
@@ -40,22 +43,9 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-center w-full lg:w-1/2">
-          <div className="">
-            <Image
-              src={'/img/hero.svg'}
-              className={"object-cover"}
-              alt="Hero Illustration"
-              loading="eager"
-              width={500}
-              priority
-              height={500}
-            />
-          </div>
-        </div>
       </Container>
       <AutoPlaySlider />
-    </>
+      </VideoBackground>
   );
 }
 

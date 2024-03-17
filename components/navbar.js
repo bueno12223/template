@@ -108,7 +108,6 @@ const Navbar = () => {
           Contactar
           </button>
 
-          <ThemeChanger />
         </div>
       </nav>
     </div>
