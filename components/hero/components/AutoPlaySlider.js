@@ -18,9 +18,9 @@ const AutoPlaySlider = () => {
   const size = 120;
 
   return (
-    <div className="mt-10 pb-4 flex items-center justify-between w-100 w-4/5 m-auto">
+    <div className="pb-4 flex items-center justify-between w-100 w-4/5 m-auto">
         <div className="px-2">
-          <div className="pt-2 text-gray-400 dark:text-gray-400">
+          <div className="text-gray-400 dark:text-gray-400">
             <Image
               width={size}
               height={size}

@@ -8,6 +8,9 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta property="og:title" content="Citrusoft" />
+          <meta property="og:description" content="Desarrollamos soluciones de software a la medida, entendemos mejoramos y automatizamos tus procesos operativos.." />
+          <meta property="og:image" content="/samples/TC-admin.webp" />
           <Link rel="preconnect" href="https://fonts.googleapis.com" />
           <Link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
           <Link

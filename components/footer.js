@@ -82,7 +82,6 @@ export default function Footer() {
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
           Copyright © {new Date().getFullYear()}.
-          Illustrations from{" "}
           <a
             href="https://www.glazestock.com/"
             target="_blank"
