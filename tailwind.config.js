@@ -11,6 +11,9 @@ module.exports = {
         trueGray: colors.neutral,
         customYellow: '#F97713', 
       },
+      backgroundColor: {
+        'custom-opacity': 'rgba(255, 255, 255, 0.05)',
+      },
     },
   },
   variants: {
