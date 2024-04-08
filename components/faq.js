@@ -3,8 +3,10 @@ import Container from "./container";
 import SectionTitle from "./sectionTitle";
 import useToast from "../hooks/useToast";
 import Step from "./stepContainer";
+import { useLanguage } from "../contexts/translate";
 
 const ContactForm = () => {
+  const { translations: { faq, contact } } = useLanguage();
   const [toastSuccess, toastError, toastWarning] = useToast();
   const [loading, setLoading] = useState(false);
   const [showForm, setShowForm] = useState(false);
@@ -61,8 +63,7 @@ const ContactForm = () => {
       <div className=" m-auto w-5/6 pb-8">
       <div className="flex flex-row w-full m-auto items-center justify-between px-32 pt-24">
       <h2 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-        Inicia a tu camino
-        al éxito
+        {faq.title}
       </h2>
       <div className="flex flex-nowrap items-center gap-4">
       <a
@@ -72,51 +73,40 @@ const ContactForm = () => {
                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
           <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
         </svg>
-        Agenda una llamada
+        {faq.button}
       </a>
     <button
         onClick={handleClick}
       className=" ml-2 text-lg font-medium text-center dark:text-white flex gap-2"
       >
-        Contactar
+      {faq.secondButton}
     </button>
     </div>
     </div>
     <div className="flex justify-center items-center bg-deep-blue p-8 mt-12 w-full m-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-      <Step
-  number={1}
-  title="Análisis y Exploración"
-  description="Tomemos juntos los primeros pasos para dar forma a tu solución revolucionaria. Hemos ayudado a más de 100 clientes a alcanzar sus metas"
-/>
-<Step
-  number={2}
-  title="Diseño Innovador"
-  description="Entendiendo tus necesidades y objetivos únicos, identificamos oportunidades y diseñamos estrategias a medida"
-/>
-<Step
-  number={3}
-  title="Construido para Prosperar"
-  description="Nuestro equipo está comprometido a crear los mejores productos con la mayor calidad posible. Impulsar el crecimiento es nuestro objetivo"
-/>
-<Step
-  number={4}
-  title="Mide tu Crecimiento"
-  description="Saber que tu desarrollo está en curso, proporcionamos soporte y datos para ayudarte a tomar mejores decisiones"
-/>
+        {
+          faq.cards.map((card, index) => (
+            <Step
+              key={index}
+              title={card.title}
+              description={card.description}
+              />
+          ))
+        }
       </div>
     </div>
     </div>
     </div>
     <div className="w-full max-w-2xl p-2 mx-auto rounded-2xl">
           <SectionTitle
-        pretitle="Contacto"
-        title="Nos encantaría saber de ti, escríbenos"
+        pretitle={contact.pretitle}
+        title={contact.title}
       />
           <form id='contacto' onSubmit={handleSubmit}>
             <div className="mb-5">
               <label htmlFor="name" className="block text-gray-700 text-lg font-bold mb-2 dark:text-gray-300">
-                Nombre:
+                {contact.name}
               </label>
               <input
                 type="text"
@@ -142,7 +132,7 @@ const ContactForm = () => {
             </div>
             <div className="mb-5">
               <label htmlFor="message" className="block text-gray-700 text-lg font-bold mb-2 dark:text-gray-300">
-                Mensaje:
+                {contact.message}:
               </label>
               <textarea
                 id="message"
@@ -153,7 +143,7 @@ const ContactForm = () => {
                 placeholder="Escribe tu mensaje aquí" />
             </div>
             <button disabled={loading} type="submit" className={`px-8 text-lg py-3 text-white bg-customYellow rounded-md w-full ${loading ? 'bg-gray-400' : ''}`}>
-              Enviar
+              {loading ? "Enviando..." : contact.button}
             </button>
           </form>
 

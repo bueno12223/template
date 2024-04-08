@@ -2,14 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import Container from "./container";
+import { useLanguage } from "../contexts/translate";
 
 export default function Footer() {
-  const navigation = [
-    "Servicios",
-    "Nosotros",
-    "Proyectos",
-  ];
-  const legal = ["Términos", "Privacidad", "Legal"];
+  const { translations } = useLanguage();
   return (
     <div className="relative">
       <Container>
@@ -30,13 +26,13 @@ export default function Footer() {
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Desarrollamos software a la medida enfocando en la eficiencia y la rentabilidad de tu empresa.
+              {translations.footer.text}
             </div>
           </div>
 
           <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-              {navigation.map((item, index) => (
+              {translations.navbar.navigation.map((item, index) => (
                 <Link key={index} href="/" className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-customYellow focus:text-customYellow focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700">                 
                     {item}
                 </Link>
@@ -45,7 +41,7 @@ export default function Footer() {
           </div>
           <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-              {legal.map((item, index) => (
+              {translations.legal.map((item, index) => (
                 <Link key={index} href="/" className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-customYellow focus:text-customYellow focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700">      
                     {item}
                 </Link>

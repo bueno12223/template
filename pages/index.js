@@ -1,43 +1,34 @@
 
 import Head from "next/head";
 import Hero from "../components/hero";
-import Navbar from "../components/navbar";
 import SectionTitle from "../components/sectionTitle";
 
-import { benefitOne } from "../components/data";
 import Video from "../components/video";
 import Benefits from "../components/benefits";
 import Footer from "../components/footer";
 import Testimonials from "../components/testimonials";
 import Faq from "../components/faq";
+import { useLanguage } from "../contexts/translate";
 
 const Home = () => {
+  const { translations } = useLanguage();
   return (
     <>
-      <Head>
-        <title>CitruSoft</title>
-        <meta
-          name="description"
-          content="Nextly is a free landing page template built with next.js & Tailwind CSS"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <Hero />
       <SectionTitle
-        pretitle="Servicios"
-        title="Lo que hacemos"
+        pretitle={translations.services.pretitle}
+        title={translations.services.title}
       />
-      <Benefits data={benefitOne} />
+      <Benefits />
       <SectionTitle
-        pretitle="Nosotros"
-        title="Mira cómo funciona" />
+        pretitle={translations.us.pretitle}
+        title={translations.us.title}
+      />
       <Video />
       <SectionTitle
-        pretitle="Testimonios"
-        title="Lo que dicen nuestros clientes"
+        pretitle={translations.testimonials.pretitle}
+        title={translations.testimonials.title}
       >
-
       </SectionTitle>
       <Testimonials />
       <Faq />

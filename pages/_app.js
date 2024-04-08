@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'react-toastify/dist/ReactToastify.css'
 import localFont from 'next/font/local'
+import { LanguageProvider } from "../contexts/translate";
 
 const myFont = localFont({
   src: [
@@ -27,7 +28,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <main className={myFont.className}>
     <ThemeProvider attribute="class">
+      <LanguageProvider>
       <Component {...pageProps} />
+      </LanguageProvider>
       <ToastContainer />
     </ThemeProvider>
     </main>

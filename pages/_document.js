@@ -25,6 +25,7 @@ class MyDocument extends Document {
           <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-E7NY2W59JZ"
+          class="dark"
         />
 
         <Script id="google-analytics">

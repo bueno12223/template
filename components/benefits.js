@@ -1,16 +1,36 @@
 import Image from "next/image";
 import React from "react";
 import Container from "./container";
+import { ChartBarSquareIcon, CursorArrowRaysIcon, FaceSmileIcon } from "@heroicons/react/20/solid";
+import { useLanguage } from "../contexts/translate";
 
-const Benefits = (props) => {
-  const { data } = props;
+const Benefits = () => {
+  const { translations } = useLanguage();
+  const data = {
+    image: '/img/bulletpoints.svg',
+    bullets: [
+      {
+        ...translations.services.bullets[0],
+        icon: <ChartBarSquareIcon />,
+      },
+      {
+        ...translations.services.bullets[1],
+        icon: <CursorArrowRaysIcon />,
+      },
+      {
+        ...translations.services.bullets[2],
+        icon: <FaceSmileIcon />,
+  
+      },
+    ],
+  };
   return (
     <>
       <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap ">
         <div
         id="Servicios"
           className={`flex items-center justify-center w-full lg:w-1/2 ${
-            props.imgPos === "right" ? "lg:order-1" : ""
+            data.imgPos === "right" ? "lg:order-1" : ""
           }`}>
           <div>
             <Image
