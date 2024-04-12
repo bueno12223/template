@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import Container from "./container";
+import Container from "../container";
 import { ChartBarSquareIcon, CursorArrowRaysIcon, FaceSmileIcon } from "@heroicons/react/20/solid";
-import { useLanguage } from "../contexts/translate";
+import { useLanguage } from "../../contexts/translate";
 
 const Benefits = () => {
   const { translations } = useLanguage();

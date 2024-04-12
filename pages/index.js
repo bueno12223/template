@@ -4,7 +4,7 @@ import Hero from "../components/hero";
 import SectionTitle from "../components/sectionTitle";
 
 import Video from "../components/video";
-import Benefits from "../components/benefits";
+import Benefits from "../components/hero/benefits";
 import Footer from "../components/footer";
 import Testimonials from "../components/testimonials";
 import Faq from "../components/faq";

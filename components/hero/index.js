@@ -7,8 +7,10 @@ import { useLanguage } from "../../contexts/translate";
 
 const Hero = () => {
   const { translations } = useLanguage()
-  const handleClick = (event) => {
-    // redirect to calendly
+  const handleClick = async(event) => {
+      const { default: ReactPixel } = await import("react-facebook-pixel");
+      ReactPixel.init(process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID);
+      ReactPixel.track("Schedule");
     window.open('https://calendly.com/citrusoft/30min', '_blank');
   }
 
