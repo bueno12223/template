@@ -11,7 +11,7 @@ const Hero = () => {
       const { default: ReactPixel } = await import("react-facebook-pixel");
       ReactPixel.init(process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID);
       ReactPixel.track("Schedule");
-      window.open('https:', '_blank');
+      window.open('https://wa.me/50762288228', '_blank');
   }
 
   return (

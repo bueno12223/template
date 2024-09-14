@@ -17,7 +17,7 @@ import Image from "next/image";
 const Home = () => {
   const { translations } = useLanguage();
   const handleClick = () => {
-    window.open('https:wa.me/50762288228','_blank',) 
+    window.open('https://wa.me/50762288228','_blank') 
   };
   return (
     <>
