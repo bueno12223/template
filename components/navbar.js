@@ -55,15 +55,15 @@ const Navbar = () => {
                     viewBox="0 0 24 24">
                     {open && (
                       <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
                       />
                     )}
                     {!open && (
                       <path
-                        fillRule="evenodd"
-                        d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                      fillRule="evenodd"
+                      d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
                       />
                     )}
                   </svg>
@@ -99,28 +99,30 @@ const Navbar = () => {
         </div>
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
+          <ThemeChanger />
           <button onClick={handleClickContact} className="px-6 py-2 text-white bg-customYellow rounded-md md:ml-5">
           {navbar.button}
           </button>
           {
-              language === 'es' ? (
-                <Image
-                  src="https://flagcdn.com/es.svg"
-                  alt="es"
-                  width="52"
-                  height="32"
-                  onClick={() => changeLanguage('en')}
-                />
-              ):
-              (
-                <Image
-                  src="https://flagcdn.com/gb.svg"
-                  alt="en"
-                  width="52"
-                  height="32"
-                  onClick={() => changeLanguage('es')}
-                />
-              )
+            language === 'es' ? (
+              <Image
+              src="https://flagcdn.com/pa.svg"
+              alt="es"
+              width="56"
+              height="40"
+              className="rounded-md"
+              onClick={() => changeLanguage('en')}
+              />
+            ):
+            (
+              <Image
+              src="https://flagcdn.com/gb.svg"
+              alt="en"
+              width="52"
+              height="32"
+              onClick={() => changeLanguage('es')}
+              />
+            )
           }
         </div>
       </nav>

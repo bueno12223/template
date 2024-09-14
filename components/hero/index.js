@@ -11,7 +11,7 @@ const Hero = () => {
       const { default: ReactPixel } = await import("react-facebook-pixel");
       ReactPixel.init(process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID);
       ReactPixel.track("Schedule");
-    window.open('https://calendly.com/citrusoft/30min', '_blank');
+      window.open('https:', '_blank');
   }
 
   return (
@@ -23,7 +23,7 @@ const Hero = () => {
             <h1 className="text-4xl uppercase font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
               {translations.hero.title} <span className="text-customYellow">software</span>
             </h1>
-            <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
+            <p className="py-5 text-xl leading-normal text-gray-800 lg:text-xl xl:text-2xl dark:text-gray-300">
             {translations.hero.text}
             </p>
             <div className="flex gap-2 items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">

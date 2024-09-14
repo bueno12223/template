@@ -3,15 +3,22 @@ import Head from "next/head";
 import Hero from "../components/hero";
 import SectionTitle from "../components/sectionTitle";
 
+
+import whatsAppIcon from "../public/img/ws.png"
+import FloatingButton from "../components/floatingbutton";
 import Video from "../components/video";
 import Benefits from "../components/hero/benefits";
 import Footer from "../components/footer";
 import Testimonials from "../components/testimonials";
 import Faq from "../components/faq";
 import { useLanguage } from "../contexts/translate";
+import Image from "next/image";
 
 const Home = () => {
   const { translations } = useLanguage();
+  const handleClick = () => {
+    window.open('https:wa.me/50762288228','_blank',) 
+  };
   return (
     <>
       <Hero />
@@ -33,6 +40,9 @@ const Home = () => {
       <Testimonials />
       <Faq />
       <Footer />
+      <FloatingButton onClick={handleClick}>
+        <Image src={whatsAppIcon}/>
+      </FloatingButton>
     </>
   );
 };
