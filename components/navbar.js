@@ -121,7 +121,7 @@ const Navbar = () => {
               width="52"
               height="32"
               onClick={() => changeLanguage('es')}
-              />
+              /> 
             )
           }
         </div>
