@@ -47,7 +47,7 @@ const ContactForm = () => {
                 {faq.button}
               </button>
               <a
-                href="https://wa.me/50762288228"
+                href="https://wa.me/50762288228?text=Hola%20quiero%20agendar%20una%20cita"
                 target="_blank"
                 onClick={() => window.fbq("track", "Schedule")}
                 className=" ml-2 text-lg font-medium text-center dark:text-white gap-2 hidden md:flex"

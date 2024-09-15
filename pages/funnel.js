@@ -19,7 +19,7 @@ import PainPoints from "../components/painPoints";
 const Home = () => {
   const { translations } = useLanguage();
   const handleClick = () => {
-    window.open('https://wa.me/50762288228','_blank') 
+    window.open('https://wa.me/50762288228?text=Hola%20quiero%20agendar%20una%20cita','_blank') 
   };
   return (
     <>
