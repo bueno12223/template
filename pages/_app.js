@@ -1,7 +1,7 @@
 import { ThemeProvider } from "next-themes";
 import "../css/tailwind.css";
 import { ToastContainer } from 'react-toastify'
-
+import { GoogleAnalytics } from "nextjs-google-analytics";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import 'react-toastify/dist/ReactToastify.css'
@@ -42,6 +42,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <main className={myFont.className}>
+       <GoogleAnalytics trackPageViews gaMeasurementId='G-DG0MRKQW5V' />
     <ThemeProvider attribute="class">
       <LanguageProvider>
       <Component {...pageProps} />
