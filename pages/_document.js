@@ -2,8 +2,6 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 import Link from "next/link";
 import Script from 'next/script'
 
-const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID
-
 class MyDocument extends Document {
   render() {
     return (
@@ -38,8 +36,9 @@ class MyDocument extends Document {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', ${FB_PIXEL_ID});
+            fbq('init', 386597180872877);
             fbq('track', 'PageView');
+            
           `}
         </Script>
       <Script>
