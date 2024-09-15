@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import 'react-toastify/dist/ReactToastify.css'
 import localFont from 'next/font/local'
 import { LanguageProvider } from "../contexts/translate";
+import { useEffect } from "react";
 
 const myFont = localFont({
   src: [
@@ -24,6 +25,20 @@ const myFont = localFont({
 })
 
 function MyApp({ Component, pageProps }) {
+
+
+  useEffect(() => {
+    import('react-facebook-pixel')
+      .then((x) => x.default)
+      .then((ReactPixel) => {
+        ReactPixel.init(process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID)
+        ReactPixel.pageView()
+
+        router.events.on('routeChangeComplete', () => {
+          ReactPixel.pageView()
+        })
+      })
+  }, [])
 
   return (
     <main className={myFont.className}>
