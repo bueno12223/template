@@ -2,6 +2,7 @@ import React from 'react';
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Head from 'next/head';
 import Link from 'next/link';
+import Script from 'next/script';
 
 export default function RootLayout({ children }) {
   return (
@@ -20,6 +21,8 @@ export default function RootLayout({ children }) {
         <body>
             <main>{children}</main>
             <GoogleAnalytics gaId="G-DG0MRKQW5V" />
+            <Script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></Script>
+
         </body>
     </html>
   )

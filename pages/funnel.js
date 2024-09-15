@@ -14,6 +14,7 @@ import Faq from "../components/faq";
 import { useLanguage } from "../contexts/translate";
 import Image from "next/image";
 import Calendar from "../components/calendar";
+import PainPoints from "../components/painPoints";
 
 const Home = () => {
   const { translations } = useLanguage();
@@ -22,25 +23,32 @@ const Home = () => {
   };
   return (
     <>
-      <Hero />
       <SectionTitle
-        pretitle={translations.services.pretitle}
-        title={translations.services.title}
+        pretitle={translations.funnel.hero.pretitle}
+        title={translations.funnel.hero.text}
       />
-      <Benefits />
+      <Benefits page='funnel' />
       <SectionTitle
-        pretitle={translations.us.pretitle}
-        title={translations.us.title}
+        pretitle={'Servicios'}
+        title={'Agenda tu Llamada DEMO aquí'}
       />
-      <Video />
+      <Calendar />
+      <SectionTitle
+      title={'Si tienes una empresa o gestionas procesos complejos, seguramente te pasa que...'}
+        pretitle={'En Esta Llamada Analizaremos Tu Negocio, Crearemos un Roadmap para Tener un MVP Listo en 90 Días, y Exploraremos Cómo Podemos Colaborar para Implementar el Plan.'}
+      />
+      <PainPoints />
       <SectionTitle
         pretitle={translations.testimonials.pretitle}
         title={translations.testimonials.title}
       >
       </SectionTitle>
       <Testimonials />
-      <Faq />
-      <Calendar />
+      <SectionTitle
+        pretitle={translations.us.pretitle}
+        title={translations.us.title}
+      />
+      <Video />
       <Footer />
       <FloatingButton onClick={handleClick}>
         <Image src={whatsAppIcon}/>

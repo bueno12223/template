@@ -4,21 +4,21 @@ import Container from "../container";
 import { ChartBarSquareIcon, CursorArrowRaysIcon, FaceSmileIcon } from "@heroicons/react/20/solid";
 import { useLanguage } from "../../contexts/translate";
 
-const Benefits = () => {
+const Benefits = ({page = 'services'}) => {
   const { translations } = useLanguage();
   const data = {
     image: '/img/bulletpoints.svg',
     bullets: [
       {
-        ...translations.services.bullets[0],
+        ...translations[page].bullets[0],
         icon: <ChartBarSquareIcon />,
       },
       {
-        ...translations.services.bullets[1],
+        ...translations[page].bullets[1],
         icon: <CursorArrowRaysIcon />,
       },
       {
-        ...translations.services.bullets[2],
+        ...translations[page].bullets[2],
         icon: <FaceSmileIcon />,
   
       },

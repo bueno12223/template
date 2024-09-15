@@ -2,7 +2,27 @@ import React, { createContext, useState } from 'react';
 import Testimonials from '../components/testimonials';
 
 const translations = {
-  es: {
+    es: {
+        funnel: {
+            hero: {
+                text: 'Descubre Cómo Optimizar los Procesos de Tu Empresa y Aumentar la Productividad Hasta un 50% en 90 Días',
+                pretitle: 'Desarrollamos software a la medida',
+            },
+            bullets: [
+                {
+                    title: 'Automatiza tareas repetitivas',
+                    desc: 'Libera tiempo automatizando procesos clave como facturación, inventario y ventas. Olvídate de tareas manuales y enfócate en lo que realmente importa para hacer crecer tu negocio.',
+                },
+                {
+                    title: 'Centraliza toda la información en un solo lugar',
+                    desc: 'Olvídate de usar múltiples herramientas descoordinadas. Con un software a medida, podrás gestionar ventas, inventarios, clientes y más desde una plataforma centralizada y fácil de usar.',
+                },
+                {
+                    title: 'Escalabilidad para el crecimiento de tu negocio',
+                    desc: 'Tu software crecerá contigo. A medida que tu empresa crece, el software se adapta fácilmente, añadiendo nuevas funcionalidades sin necesidad de cambiar todo el sistema, ahorrándote costos y tiempo.',
+                }
+            ]
+        },    
     navbar: {
         navigation: [
             "Servicios",
@@ -85,7 +105,7 @@ const translations = {
         ],
     },
     contact: {
-        title: 'Nos encantaría saber de ti, escríbenos',
+        title: 'Agenda tu llamada demo debajo',
         pretitle: 'Contacto',
         name: 'Nombre:',
         message: 'Mensaje',

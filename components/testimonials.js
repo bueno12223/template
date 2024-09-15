@@ -20,28 +20,6 @@ const Testimonials = () => {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      async (entries) => {
-        if (entries[0].isIntersecting) {
-          const { default: ReactPixel } = await import("react-facebook-pixel");
-          ReactPixel.init(process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID);
-          ReactPixel.track("Lead");
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (testimonialRef.current) {
-      observer.observe(testimonialRef.current);
-    }
-
-    return () => {
-      if (testimonialRef.current) {
-        observer.unobserve(testimonialRef.current);
-      }
-    };
-  }, []);
   const handleNext = () => {
     setFade(false);
     setTimeout(() => {
