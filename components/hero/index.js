@@ -8,6 +8,9 @@ import { useLanguage } from "../../contexts/translate";
 const Hero = () => {
   const { translations } = useLanguage()
   const handleClick = async(event) => {
+      const { default: ReactPixel } = await import("react-facebook-pixel");
+      ReactPixel.init(process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID);
+      ReactPixel.track("Lead");
       const element = document.getElementById("contacto");
       if (!element) return;
       element.scrollIntoView({ behavior: "smooth" });
