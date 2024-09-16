@@ -25,7 +25,7 @@ function Calendar() {
       if (event.data.event && event.data.event === 'calendly.event_scheduled') {
         const { default: ReactPixel } = await import("react-facebook-pixel");
         ReactPixel.init(process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID);
-        ReactPixel.track("Lead");
+        ReactPixel.track("Schedule");
       }
     };
 
